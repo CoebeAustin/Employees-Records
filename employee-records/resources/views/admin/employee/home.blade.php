@@ -12,6 +12,7 @@
                     <div class="d-flex align-items-center justify-content-between">
                         <h1 class="mb-0">List Employee</h1>
                         <a href="{{ route('admin/employees/create') }}" class="btn btn-primary">Add Employee</a>
+                        <a href="{{ route('admin.dashboard') }}" class="btn btn-primary">Go back to dashboard</a>
                     </div>
                     <hr />
                     @if (session()->has('success'))
