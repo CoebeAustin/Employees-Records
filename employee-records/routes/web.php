@@ -22,6 +22,8 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/dashboard', [HomeController::class, 'index']);
     Route::get('admin/employees', [EmployeeController::class, 'index'])->name('admin/employees');
+    Route::get('admin/employees/create', [EmployeeController::class, 'create'])->name('admin/employees/create');
+    Route::post('/admin/employees/save', [EmployeeController::class, 'save'])->name('admin/employees/save');
 });
 require __DIR__.'/auth.php';
 

@@ -9,7 +9,17 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    Content
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h1 class="mb-0">List Employee</h1>
+                        <a href="{{ route('admin/employees/create') }}" class="btn btn-primary">Add Employee</a>
+                    </div>
+                    <hr />
+                    @if (session()->has('success'))
+                    <div class="alert alert-success">
+                    {{ session('success') }}
+                    </div>
+                    @endif
+                    <p><a href="employees" class="btn btn-primary">Employees</a></p>
                 </div>
             </div>
         </div>
